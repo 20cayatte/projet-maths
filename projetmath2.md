@@ -106,3 +106,27 @@ $$
 On choisit $u(t)= k \times \nabla H(x(t))$
 
 Alors $\frac{d(H(x(t)-H_0)}{dt}= - k\|\nabla H(x(t))\|^2 \times (H(x(t)-H_0)$
+
+
+
+On se place à une distance strictement positive de $\bar x$ donc il existe $c>0$ tq $\|x(t)-\bar x \|>c$
+
+
+
+Alors il existe $m>0$ tq $\forall t \in \mathbb{R}, \|\nabla H(x(t))\|>m$ .
+
+1er cas: $G(t)=H(x(t))-H_0 >0$
+Supossons par l'absurde que $G$ change de signe: alors il existe $x_1$ et $x_2$ tq $G(x_1)<0$ et $G(x_2)>0$ donc parcontinuité de $G$ et par  le théorème des valeurs intermédiaires il existe $x_0$ entre  $x_1$ et $x_2$ tq  $G(x_0)=0$ . Alors par le théorème d'unicité de Cauchy Lipschitz appliqué à $G$ solution de l'équation du début de question, $G=0$ Absurde donc $G$ ne peut pas changer de signe. 
+
+Donc en utilisant les informations précédentes: 
+ $\frac{d(H(x(t)-H_0)}{dt} =- k\|\nabla H(x(t))\|^2 \times (H(x(t)-H_0) \le -km^2(H(x(t)-H_0)$
+ donc $G'+km^2G \le 0$
+ Posons $g=G'+km^2G \le 0$ 
+ Alors $G(t)= e^{-km^2t}(G(0)+ \int_{0}^t \mathrm{e^{km^2u}g(u)du})$ Or $\int_{0}^t \mathrm{e^{km^2u}g(u)du}) \le 0$ car $g$ est négative. Donc $G(t) \le G(0)e^{-km^2t}$ avec $G(0)>0$ ce qui montre bien la convergence exponentielle vers 0 de $G$ et donc de $H$ vers $H_0$. 
+
+
+ 2eme cas: On suppose maintenant $G(t)=H(x(t))-H_0 <0$ avec $G$ toujours de signe constant pour les mêmes raisons. On a alors par la même démarche $g=G'+km^2G \ge 0$. Donc $G(t)= e^{-km^2t}(G(0)+ \int_{0}^t \mathrm{e^{km^2u}g(u)du})$ Or $\int_{0}^t \mathrm{e^{km^2u}g(u)du}) \ge 0$, d'où $G(t) \ge G(0)e^{-km^2t}$ avec $G(0)<0$ ce qui permet de conclure. 
+
+
+
+
